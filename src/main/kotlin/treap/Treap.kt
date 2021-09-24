@@ -191,22 +191,5 @@ class Treap<K: Comparable<K>, V> : TreeMap<K,V>, Iterable<TreapNode<K,V>> {
 }
 
 
-fun main(){
-    val keys: MutableList<Int> = mutableListOf(18,11,7,1,9,14,16,15,17,27)
-    val values: MutableList<Int> = mutableListOf(1,2,3,4,5,6,7,8,9,10)
-    val prioritys: MutableList<Int> = mutableListOf(98,80,37,33,3,78,54,29,11,70)
-    var tree:Treap<Int,Int> = Treap<Int,Int>()
-    tree.putAll(keys,values,prioritys)
-    //val rootelement = tree.maxNode(tree.root)
-    //println("${rootelement!!.key} \n\n")
 
-    val printer = TreapPrinter<Int,Int>()
-    printer.printTreap(tree.root)
-    tree.remove(18)
-    //tree.remove(12)
-    //printer.printTreap(tree.root)
-
-  
-      
-}
 

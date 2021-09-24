@@ -206,15 +206,3 @@ class BinaryTree<K: Comparable<K>, V> :TreeMap<K,V>, Iterable<Pair<K,V>>{
 }
 
 
-fun main(){
-    val keys: MutableList<Int> = mutableListOf(18,11,27,7,14)
-    val values: MutableList<Int> = mutableListOf(18,12,3,4,5)
-    var tree: BinaryTree<Int, Int> = BinaryTree<Int,Int>()
-    var secondTree = BinaryTree<Int,Int>()
-    secondTree.putAll(keys,values)
-    tree.putAll(keys,values)
-
-    print(tree.root.hashCode())
-
-
-}
