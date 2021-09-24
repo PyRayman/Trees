@@ -1,5 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'jacoco'
 
 }
 
@@ -21,7 +22,26 @@ dependencies {
 
 test{
     useJUnitPlatform()
+    jacoco {
+        destinationFile = file("${buildDir}/jacoco/test.exec")
+    }
 }
+
+test.finalizedBy(jacocoTestReport)
+
+
+jacocoTestReport {
+    reports {
+        xml.required.set(false)
+        csv.required.set(false)
+        html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
+    }
+}
+
+
+
+
+
 
 
 
