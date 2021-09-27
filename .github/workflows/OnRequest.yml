@@ -29,14 +29,14 @@ jobs:
          uses: actions/upload-artifact@v2
          with:
           name: code-tests-report
-          path: build/reports/tests/test/index.html
+          path: build/reports/tests/test/
        - name: Archive code coverage results
          uses: actions/upload-artifact@v2
          with:
           name: code-coverage-report
-          path: build/jacocoHtml/index.html
-       - name: Download all workflow run artifacts
-         uses: actions/download-artifact@v2
+          path: build/jacocoHtml/
+      # - name: Download all workflow run artifacts
+       #  uses: actions/download-artifact@v2
 
 
          
