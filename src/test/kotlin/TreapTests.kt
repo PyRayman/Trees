@@ -240,7 +240,7 @@ class TreapTests{
             val values = mutableListOf<Int>(1,2,3,4)
             val prioritys = mutableListOf<Int>(1,2)
 
-            assertFalse((keys.size == prioritys.size) == (keys.size == values.size))
+            assertTrue((keys.size == prioritys.size) == (keys.size == values.size))
             //assertThrows<Exception> { tree.putAll(keys,values,prioritys) }
 
         }
