@@ -234,6 +234,30 @@ class TreapTests{
 
         }
 
+        @Test
+        fun putAllDifferenceSizesKPVTest(){
+            val keys = mutableListOf<Int>(1,2,3)
+            val values = mutableListOf<Int>(1,2,3,4)
+            val prioritys = mutableListOf<Int>(1,2)
+
+            assertFalse((keys.size == prioritys.size) == (keys.size == values.size))
+            //assertThrows<Exception> { tree.putAll(keys,values,prioritys) }
+
+        }
+
+        @Test
+        fun putAllTest(){
+            val keys = mutableListOf<Int>(1,2,3)
+            val values = mutableListOf<Int>(1,2,3)
+            val prioritys = mutableListOf<Int>(1,2,3)
+
+            tree.putAll(keys,values,prioritys)
+            for (i in 0 until keys.size)
+                assertTrue(tree.find(keys[i]) != null)
+
+        }
+
+
 
 
     }
