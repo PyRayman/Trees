@@ -1,5 +1,5 @@
 import treap.Treap
-import treap.TreapNode
+import TreapNode
 
 
 import org.junit.jupiter.api.Assertions.*
